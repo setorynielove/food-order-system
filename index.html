@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+</head>
+<body>
+
+    <h1>Order Form</h1>
+
+    <form onsubmit="return printReceipt()">
+        <label>Full Name: </label>
+        <input type="text" id="name" required><br>
+
+        <label>Grade & Section: </label>
+        <input type="text" id="gradesection" required><br><br>
+
+        <label>Food: </label> 
+        <select id="food">
+            <option value="Chicken meal (PHP 75)">Chicken meal (PHP 75)</option>
+            <option value="Pork meal (PHP 85)">Pork meal (PHP 85)</option>
+            <option value="Beef meal (PHP 105)">Beef meal (PHP 105)</option>
+        </select><br>
+
+        <label>Quantity (Max of 5): </label>
+        <input type="number" id="qty" min="1" max="5" required><br><br>
+
+        <label>Customer Type: </label><br>
+        <select id="customertype">
+            <option value="Student">Student</option>
+            <option value="Faculty/Staff">Faculty/Staff</option>
+        </select><br><br>
+
+        <input type="submit" value="Place Order">
+    </form>
+
+    <h2>ORDER SUMMARY</h2>
+    <div id="receipt"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
